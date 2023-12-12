@@ -1,4 +1,4 @@
-# DDPG-ASV-path-follow
+# Harnessing Traditional Controllers for Fast-Track Training of Deep Reinforcement Learning Control Strategies
 Achieves path following of an autonomous surface vessel (ASV) with a Deep Deterministic Policy Gradient (DDPG) agent. This code uses reinforcement learning to train an agent to control the rudder angle of the Kriso Container Ship (KCS) to achieve waypoint tracking the presence of calm waters and in the presence of winds
 
 # Why the project is useful?
