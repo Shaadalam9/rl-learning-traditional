@@ -21,7 +21,7 @@ The project has been setup with a docker file that can be used to build the dock
 Clone the repository to your system
 
 ```commandline 
-git clone https://github.com/MarineAutonomy/DDPG-ASV-path-follow.git
+git clone https://github.com/Shaadalam9/RL-learning-traditional.git
 ```
 
 and cd into the src folder. The prompt on the terminal should look as ```.../DDPG-ASV-path-follow/src$```
