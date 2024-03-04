@@ -24,7 +24,7 @@ Clone the repository to your system
 git clone https://github.com/Shaadalam9/RL-learning-traditional.git
 ```
 
-and cd into the src folder. The prompt on the terminal should look as ```.../DDPG-ASV-path-follow/src$```
+and cd into the src folder. The prompt on the terminal should look as ```.../RL-learning-traditional/src$```
 
 **Step 2:** 
 
