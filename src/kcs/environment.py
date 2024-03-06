@@ -159,7 +159,6 @@ class ship_environment(py_environment.PyEnvironment):
 
         # DISTANCE TO GOAL
         distance = ((x - x_goal) ** 2 + (y - y_goal) ** 2) ** 0.5
-        
 
         self.distance = distance
         if self.train_test_flag == 1:
@@ -191,12 +190,9 @@ class ship_environment(py_environment.PyEnvironment):
         if self.train_test_flag == 1:
             self.course_ang_err_traj.append(course_angle_err)
 
-
         reward = 0
- 
 
         observation = [cross_track_error, course_angle_err, distance, r]
-        
 
         # DESTINATION CHECK
         if abs(distance) <= 0.5:
