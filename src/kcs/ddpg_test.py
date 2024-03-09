@@ -1,7 +1,7 @@
 import numpy as np
 import test_wp_track as wpt
 
-model_name = 'model_002'
+model_name = 'model_010'
 
 def ellipse(flag=0):
     npoints = 15
