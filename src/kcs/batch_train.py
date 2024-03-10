@@ -7,7 +7,7 @@ import tensorflow as tf
 max_batch_train = 1
 
 for batch_train in range(0, max_batch_train):
-    params.model_name = 'model_' + '{:03}'.format(batch_train + 100)
+    params.model_name = 'model_' + '{:03}'.format(batch_train + 101)
 
     if batch_train < max_batch_train:
         params.duration = 160
@@ -32,8 +32,8 @@ for batch_train in range(0, max_batch_train):
         params.num_steps = 2
         params.prefetch = 3
         params.destination_reward = 100
-        params.traditional_ep = 2001
-        params.total_episodes = 7001
+        params.traditional_ep = 0
+        params.total_episodes = 5001
         params.random_seed = 65220 #np.random.randint(100000)
         params.DDPG_update_time_steps = 10
         params.DDPG_policy_store_frequency = 1000
