@@ -1,6 +1,6 @@
-src/kcs/__pycache__
+kcs/__pycache__
 env
 # Instance specific files
 config
 secret
-src/kcs/saved_models/.DS_Store
+kcs/saved_models/.DS_Store
