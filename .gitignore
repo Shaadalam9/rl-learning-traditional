@@ -3,3 +3,4 @@ env
 # Instance specific files
 config
 secret
+src/kcs/saved_models/.DS_Store
