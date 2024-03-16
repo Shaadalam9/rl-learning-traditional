@@ -1,6 +1,8 @@
-kcs/__pycache__
+__pycache__
 env
 # Instance specific files
 config
 secret
 kcs/saved_models/.DS_Store
+.gitattributes
+
