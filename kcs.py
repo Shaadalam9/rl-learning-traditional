@@ -45,7 +45,7 @@ tp = 1 - 0.793  # Thrust Deduction Factor
 eps = 0.956
 eta = 0.7979
 kappa = 0.633
-xp_P = -0.4565  # Assuming propeller location is 10 m ahead of AP (Rudder Location)
+xp_P = -0.4565  # Assuming propeller location is 10 m ahead of AP (Rudder Location)  # noqa: E501
 xp_R = -0.5
 
 mp = Dsp / (0.5 * (L ** 2) * d_em)
@@ -76,8 +76,8 @@ def KCS_ode(t, v, delta_c, wind_flag=0, wind_speed=0, wind_dir=0,
     up = v[0]
     vp = v[1]
     rp = v[2]
-    xp = v[3]
-    yp = v[4]
+    xp = v[3]  # noqa: F841
+    yp = v[4]  # noqa: F841
     psi = v[5]
     delta = v[6]
     # n_prop = v[7]
@@ -134,7 +134,7 @@ def KCS_ode(t, v, delta_c, wind_flag=0, wind_speed=0, wind_dir=0,
 
     lp_R = -0.755
 
-    up_R = eps * (1 - wp) * up * np.sqrt(eta * (1 + kappa * (np.sqrt(1 + 8 * Kt / (np.pi * (J ** 2))) - 1)) ** 2 + (1 - eta))
+    up_R = eps * (1 - wp) * up * np.sqrt(eta * (1 + kappa * (np.sqrt(1 + 8 * Kt / (np.pi * (J ** 2))) - 1)) ** 2 + (1 - eta))  # noqa: E501
 
     vp_R = gamma_R * (vp + rp * lp_R)
 
@@ -187,7 +187,7 @@ def KCS_ode(t, v, delta_c, wind_flag=0, wind_speed=0, wind_dir=0,
 
         Xp_W = (Ax * Cwx * Uwr * abs(Uwr)) * rhoa / (Lp * de * rhow)
         Yp_W = (Ay * Cwy * Uwr * abs(Uwr)) * rhoa / (Lp * de * rhow)
-        Np_W = (Ay * Lp * Cwpsi * Uwr * abs(Uwr)) * rhoa / ((Lp ** 2) * de * rhow)
+        Np_W = (Ay * Lp * Cwpsi * Uwr * abs(Uwr)) * rhoa / ((Lp ** 2) * de * rhow)  # noqa: E501
     else:
         Xp_W = 0.0
         Yp_W = 0.0
@@ -234,10 +234,10 @@ def KCS_ode(t, v, delta_c, wind_flag=0, wind_speed=0, wind_dir=0,
     # # Commanded Rudder Angle
     # delta_c = KCS_rudder_angle(t, v)
 
-    T_rud = 0.1  # Corresponds to a time constant of 0.1 * L / U_des = 2 seconds
+    T_rud = 0.1  # Corresponds to a time constant of 0.1 * L / U_des = 2 seconds  # noqa: E501
     deltad = (delta_c - delta) / T_rud
 
-    deltad_max = 5 * np.pi / 180 * (L / U_des)  # Maximum rudder rate of 5 degrees per second
+    deltad_max = 5 * np.pi / 180 * (L / U_des)  # Maximum rudder rate of 5 degrees per second  # noqa: E501
 
     # Rudder rate saturation
     if np.abs(deltad) > deltad_max:
